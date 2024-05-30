@@ -39,7 +39,7 @@ errored_words: list[str] = []
 with open('output.jsonl', 'w', encoding="utf-8") as file:
     for page_id, page_title, page_namespace, page_is_redirect, languages in tqdm(cursor):
         page_title = decode_bytes(page_title)
-        # I think because of this it can error: 
+        # Because of this it can error: 
         # https://stackoverflow.com/questions/44900545/wikipedia-database-dump-utf8-charset#comment76803654_44900545
         try:
             languages = json.loads(languages)
