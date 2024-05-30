@@ -2,3 +2,4 @@ enwiki-20240520-langlinks.sql
 enwiki-20240520-page.sql
 output.jsonl
 errored_words.txt
+ex.json
