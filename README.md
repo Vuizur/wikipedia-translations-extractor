@@ -3,9 +3,10 @@
 This is a repo showing how to extract the title translations from Wikipedia. 
 First you need to execute `setup.sh`, and then `extract_data.py` 
 
-The resulting JSON looks like this and can be downloaded in the [releases](https://github.com/Vuizur/wikipedia-translations-extractor/releases/tag/latest):
+The resulting file is in JSON lines format, where the content of one JSON object (line) looks like this.
+The data can be downloaded in the [releases](https://github.com/Vuizur/wikipedia-translations-extractor/releases/tag/latest):
 
-```json
+```json5
 {
     "page_id": 12,
     "title": "Anarchism",
