@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "wikipedia-translation-extractor"
+version = "0.1.0"
+description = ""
+authors = ["Vuizur"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+mariadb = "^1.1.10"
+tqdm = "^4.66.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
