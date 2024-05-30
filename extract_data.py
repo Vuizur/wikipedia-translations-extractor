@@ -1,4 +1,3 @@
-from collections import defaultdict
 import json
 import mariadb
 from tqdm import tqdm
@@ -37,7 +36,7 @@ LIMIT 10;
 """)
 # Write results to jsonl
 with open('output.jsonl', 'w') as file:
-    for page_id, page_title, page_namespace, page_is_redirect, languages in cursor:
+    for page_id, page_title, page_namespace, page_is_redirect, languages in tqdm(cursor):
         page_title = decode_bytes(page_title)
         languages = json.loads(languages)
         # Write the JSON line
@@ -48,7 +47,6 @@ with open('output.jsonl', 'w') as file:
             "namespace": page_namespace,
             "languages": languages
         }, ensure_ascii=False) + '\n')
-
 
 cursor.close()
 conn.close()
